@@ -1,0 +1,69 @@
+#include "pch.h"
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+void one() {
+	int d;
+	double pi = 3.14, L;
+	cout << "------------------" << endl;
+	cout << "d=";
+	cin >> d;
+	L = pi * d;
+	cout << "L=" << L << endl;
+}
+
+void two() {
+	double a, b, S;
+	cout << "------------------" << endl;
+	cout << "a=";
+	cin >> a;
+	cout << "b=";
+	cin >> b;
+	S = (a + b) / 2;
+	cout << "S=" << S << endl;
+}
+
+void three() {
+	int a, b, sum, dif, pr;
+	double ch;
+	cout << "------------------" << endl;
+	cout << "a=";
+	cin >> a;
+	cout << "b=";
+	cin >> b;
+	sum = pow(a, 2) + pow(b, 2);
+	dif = pow(a, 2) - pow(b, 2);
+	pr = pow(a, 2) * pow(b, 2);
+	ch = pow(a, 2) / pow(b, 2);
+	cout << "sum=" << sum << " " << "dif=" << dif << " " << "pr=" << pr << " " << "ch=" << ch << endl;
+}
+
+void four() {
+	double x, a, b, sum, pr, ch, dif;
+	cout << "------------------" << endl;
+	cout << "a=";
+	cin >> a;
+	cout << "b=";
+	cin >> b;
+	sum = abs(a) + abs(b);
+	dif = abs(a) - abs(b);
+	pr = abs(a) * abs(b);
+	x = abs(a) / abs(b);
+	cout << "sum=" << sum << " " << "dif=" << dif << " " << "pr=" << pr << " " << "ch=" << x << endl;
+}
+
+int main() {
+	int a, b, S, P;
+	cout << "a=";
+	cin >> a;
+	cout << "b=";
+	cin >> b;
+	S = a * b;
+	P = 2 * (a + b);
+	cout << "S=" << S << " " << "P=" << P << endl;
+	one();
+	two();
+	three();
+	four();
+}
