@@ -1,0 +1,33 @@
+#include "pch.h"
+#include <iostream>
+using namespace std;
+void one()
+{
+	int A, B, C, a, b, sum;
+	cout << "------------------" << endl;
+	cout << "A, B, C = ";
+	cin >> A >> B >> C;
+	a = C - A;
+	b = B - A;
+	cout << "AC = ";
+	cin >> a;
+	cout << "BC = ";
+	cin >> b;
+	sum = a + b;
+	cout << "sum = " << sum;
+}
+
+int main()
+{
+	int a, b, x1, x2, y1, y2, S;
+	cout << "(x1,y1) = ";
+	cin >> x1 >> y1;
+	cout << "(x2,y2) = ";
+	cin >> x2 >> y2;
+	a = x2 - x1;
+	b = y2 - y1;
+	S = pow(a,2) + pow(b,2);
+	cout << "S = " << S;
+	one();
+}
+
