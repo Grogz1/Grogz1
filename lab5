@@ -1,4 +1,3 @@
-#include "pch.h"
 #include <iostream>
 using namespace std;
 void one()
@@ -9,25 +8,78 @@ void one()
 	cin >> A >> B >> C;
 	a = C - A;
 	b = B - A;
-	cout << "AC = ";
-	cin >> a;
-	cout << "BC = ";
-	cin >> b;
+	cout << "AC = " << a << endl;
+	cout << "AB = " << b << endl;
 	sum = a + b;
-	cout << "sum = " << sum;
+	cout << "sum = " << sum << endl;
 }
 
-int main()
+void two()
 {
-	int a, b, x1, x2, y1, y2, S;
+	int A, C, B, a, b, pr;
+	cout << "------------------" << endl;
+	cout << "A, C, B = ";
+	cin >> A >> C >> B;
+	a = C - A;
+	b = B - C;
+	cout << "AC = " << a << endl;
+	cout << "BC = " << b << endl;
+	pr = a * b;
+	cout << "pr = " << pr << endl;
+}
+
+void three()
+{
+	int a, b, x1, x2, y1, y2, P, S;
+	cout << "------------------" << endl;
 	cout << "(x1,y1) = ";
 	cin >> x1 >> y1;
 	cout << "(x2,y2) = ";
 	cin >> x2 >> y2;
 	a = x2 - x1;
 	b = y2 - y1;
-	S = pow(a,2) + pow(b,2);
-	cout << "S = " << S;
-	one();
+	P = (a + b) * 2;
+	S = a * b;
+	cout << "P = " << P << endl;
+	cout << "S = " << S << endl;
 }
 
+void four()
+{
+	int x1, x2, x3, y1, y2, y3;
+	double d1, d2, d3, P, p, S;
+	cout << "------------------" << endl;
+	cout << "(x1, y1) = ";
+	cin >> x1 >> y1;
+	cout << "(x2, y2) = ";
+	cin >> x2 >> y2;
+	cout << "(x3, y3) = ";
+	cin >> x3 >> y3;
+	d1 = sqrt(pow(x2 - x1, 2) + pow(y2 - y1, 2));
+	d2 = sqrt(pow(x3 - x1, 2) + pow(y3 - y1, 2));
+	d3 = sqrt(pow(x1 - x3, 2) + pow(y1 - y3, 2));
+	P = d1 + d2 + d3;
+	cout << "P = " << P << endl;
+	p = P / 2;
+	S = sqrt(p * (p - d1) * (p - d2) * (p - d3));
+	cout << "S = " << S << endl;
+}
+
+int main()
+{
+	int a, b, x1, x2, y1, y2;
+	double s, S;
+	cout << "(x1,y1) = ";
+	cin >> x1 >> y1;
+	cout << "(x2,y2) = ";
+	cin >> x2 >> y2;
+	a = x2 - x1;
+	b = y2 - y1;
+	s = pow(a, 2) + pow(b, 2);
+	S = sqrt(s);
+	cout << "S = " << S << endl;
+	one();
+	two();
+	three();
+	four();
+}
