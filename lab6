@@ -1,0 +1,113 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+void six()
+{
+    double A, x, y;
+    cout << "--------------------" << endl;
+    cout << "A = ";
+    cin >> A;
+    x = A * A;
+    cout << "A^2 = " << x << endl;
+    y = x * A;
+    cout << "A^3 = " << y << endl;
+    x = x * y;
+    cout << "A^5 = " << x << endl;
+    y = x;
+    x = y * y;
+    cout << "A^10 = " << x << endl;
+    x = x * y;
+    cout << "A^15 = " << x << endl;
+}
+void five()
+{
+    double A, x;
+    cout << "--------------------" << endl;
+    cout << "A = ";
+    cin >> A;
+    x = A * A;
+    cout << "A^2 = " << x << endl;
+    x = x * x;
+    cout << "A^4 = " << x << endl;
+    x = x * x;
+    cout << "A^8 = " << x << endl;
+}
+
+void four()
+{
+    double x, y;
+    cout << "--------------------" << endl;
+    cout << "y = 4(x - 3)^6 - 7(x - 3)^3 + 2" << endl;
+    cout << "x = ";
+    cin >> x;
+    y = 4 * pow(x - 3, 6) - 7 * pow(x - 3, 3) + 2;
+    cout << "y =" << y << endl;
+}
+
+void three()
+{
+    int x;
+    double y;
+    cout << "--------------------" << endl;
+    cout << "y = 3x^6 - 6x^2 - 7" << endl;
+    cout << "x = ";
+    cin >> x;
+    y = pow(3 * x, 6) - pow(6 * x, 2) - 7;
+    cout << "y =" << y << endl;
+}
+
+void two()
+{
+    int A, B, C, A1, B1, C1;
+    cout << "--------------------" << endl;
+    cout << "A = ";
+    cin >> A;
+    cout << "B = ";
+    cin >> B;
+    cout << "C = ";
+    cin >> C;
+    A1 = B;
+    B1 = C;
+    C1 = A;
+    cout << "New A = " << A1 << endl;
+    cout << "New B = " << B1 << endl;
+    cout << "New C = " << C1 << endl;
+}
+
+void one() 
+{
+    int A, B, C, A1, B1, C1;
+    cout << "--------------------" << endl;
+    cout << "A = ";
+    cin >> A;
+    cout << "B = ";
+    cin >> B;
+    cout << "C = ";
+    cin >> C;
+    A1 = C;
+    B1 = A;
+    C1 = B;
+    cout << "New A = " << A1 << endl;
+    cout << "New B = " << B1 << endl;
+    cout << "New C = " << C1 << endl;
+}
+
+int main()
+{
+    int A, B, A1, B1;
+    cout << "A = ";
+    cin >> A;
+    cout << "B = ";
+    cin >> B;
+    A1 = B;
+    B1 = A;
+    cout << "New A = " << A1 << endl;
+    cout << "New B = " << B1 << endl;
+    one();
+    two();
+    three();
+    four();
+    five();
+    six();
+}
