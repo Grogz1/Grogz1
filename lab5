@@ -7,9 +7,9 @@ void one()
 	cout << "A, B, C = ";
 	cin >> A >> B >> C;
 	a = C - A;
-	b = B - A;
+	b = C - B;
 	cout << "AC = " << a << endl;
-	cout << "AB = " << b << endl;
+	cout << "BC = " << b << endl;
 	sum = a + b;
 	cout << "sum = " << sum << endl;
 }
@@ -20,12 +20,16 @@ void two()
 	cout << "------------------" << endl;
 	cout << "A, C, B = ";
 	cin >> A >> C >> B;
-	a = C - A;
-	b = B - C;
-	cout << "AC = " << a << endl;
-	cout << "BC = " << b << endl;
-	pr = a * b;
-	cout << "pr = " << pr << endl;
+	if (C < B) {
+		a = C - A;
+		b = B - C;
+		cout << "AC = " << a << endl;
+		cout << "BC = " << b << endl;
+		pr = a * b;
+		cout << "pr = " << pr << endl;
+	}
+	C = 0;
+	cout << "C > B = false" << endl;
 }
 
 void three()
@@ -56,8 +60,8 @@ void four()
 	cout << "(x3, y3) = ";
 	cin >> x3 >> y3;
 	d1 = sqrt(pow(x2 - x1, 2) + pow(y2 - y1, 2));
-	d2 = sqrt(pow(x3 - x1, 2) + pow(y3 - y1, 2));
-	d3 = sqrt(pow(x1 - x3, 2) + pow(y1 - y3, 2));
+	d2 = sqrt(pow(x3 - x2, 2) + pow(y3 - y2, 2));
+	d3 = sqrt(pow(x3 - x1, 2) + pow(y3 - y1, 2));
 	P = d1 + d2 + d3;
 	cout << "P = " << P << endl;
 	p = P / 2;
