@@ -1,0 +1,104 @@
+#include <iostream>;
+#include <cmath>;
+using namespace std;
+
+void five()
+{
+	cout << "-------------------" << endl;
+	double A1, A2, B1, B2, C1, C2, x, y;
+	cout << "A1, B1, C1 = ";
+	cin >> A1 >> B1 >> C1;
+	cout << "A2, B2, C2 = ";
+	cin >> A2 >> B2 >> C2;
+	y = (C2 * A1 - A2 * C1) / (B2 * A1 - A2 * B1);
+	x = (C2 - B2 * y) / A2;
+	if (y == -0)
+		y = 0;
+	if (x == -0)
+		x = 0;
+	cout << "X = " << x << endl;
+	cout << "Y = " << y << endl;
+}
+
+void four()
+{
+	cout << "-------------------" << endl;
+	double A, B;
+	cout << "A = ";
+	cin >> A;
+	cout << "B = ";
+	cin >> B;
+	if (A == 0)
+	{
+		cout << "A = false" << endl; 
+	}
+	else
+	{
+		cout << "X = " << -B / A << endl; 
+	}
+}
+
+
+void three()
+{
+	cout << "-------------------" << endl;
+	int V1, V2, S, T;
+	cout << "V1 = ";
+	cin >> V1;
+	cout << "V2 = ";
+	cin >> V2;
+	cout << "S = ";
+	cin >> S;
+	cout << "T = ";
+	cin >> T;
+	cout << "X = " << abs((V1 + V2) * T + S) << "km" << endl;
+}
+
+void two()
+{
+	cout << "-------------------" << endl;
+	double x, y, a;
+	cout << "x, a = ";
+	cin >> x >> a;
+	cout << "X = " << a / x << " rub" << endl;
+	cout << "y = ";
+	cin >> y;
+	cout << "Y = " << y * (a / x) << " rub" << endl;
+}
+
+
+void one()
+{
+	cout << "-------------------" << endl;
+	cout << "a = ";
+	double a;
+	double p = 3.1415926535;
+	cin >> a;
+	double s = 180 / p * a;
+	if ((s < 360) or (s == 360))
+	{
+		cout << "s = " << s << endl;
+	}
+	if (s > 360)
+	{
+		int v = s / 360;
+		s = s - (360 * v);
+		cout << "s = " << s << endl; 
+	}
+}
+
+
+int main()
+{
+
+	double a;
+	double p = 3.1415926535;
+	cout << "a = ";
+	cin >> a;
+	cout << "X = " << a * p / 180 << endl; 
+	one();
+	two();
+	three();
+	four();
+	five();
+}
