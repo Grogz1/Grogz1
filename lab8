@@ -1,0 +1,70 @@
+#include <iostream>
+using namespace std;
+
+void four()
+{
+	int a, b;
+	cout << "------------------" << endl;
+	cout << "A = "; 
+	cin >> a;
+	b = (a % 100 / 10 * 100) + (a % 10) * 10 + a / 100;
+	cout << "B = " << b << endl;
+}
+
+void three()
+{
+	int a, b;
+	cout << "------------------" << endl;
+	cout << "A = ";
+	cin >> a;
+	b = a / 10 + a % 10 * 10;
+	cout << "B = " << b << endl;
+}
+
+void two()
+{
+	int a, b, c;
+	cout << "------------------" << endl;
+	cout << "A = ";
+	cin >> a;
+	cout << "B = ";
+	cin >> b;
+	if (a > b)
+	{
+		c = a % b;
+		cout << "C = " << c << endl;
+	}
+	else
+	cout << "ERROR" << endl;
+}
+
+void one()
+{
+	int a, b, c;
+	cout << "------------------" << endl;
+	cout << "A = ";
+	cin >> a;
+	cout << "B = ";
+	cin >> b;
+	if (a > b) 
+	{
+		c = a / b;
+		cout << "C = " << c << endl;
+	}
+	else
+	cout << "ERROR" << endl;
+}
+
+int main()
+{
+	double a;
+	int b;
+	cout << "a = ";
+	cin >> a;
+	b = a / 8;
+	cout << "b = " << b << endl;
+	one();
+	two();
+	three();
+	four();
+}
