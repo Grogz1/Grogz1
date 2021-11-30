@@ -1,0 +1,136 @@
+#include <iostream>
+using namespace std;
+
+void six()
+{
+	double a, b, c;
+	cout << "--------------------" << endl;
+	cout << "a, b, c = ";
+	cin >> a;
+	cin >> b;
+	cin >> c;
+	if ((a + b) > c and (a + c) > b and (b + c) > a)
+	{
+		cout << "true" << endl;
+	}
+	else
+	{
+		cout << "false" << endl;
+	}
+}
+void five()
+{
+	double a, b, c;
+	cout << "--------------------" << endl;
+	cout << "a, b, c = ";
+	cin >> a;
+	cin >> b;
+	cin >> c;
+	if (a * a == b * b + c * c) 
+	{
+		cout << "true" << endl;
+	}
+	else {
+		if (b * b == a * a + c * c) {
+			cout << "true" << endl;
+		}
+		else {
+			if (b * b == a * a + c * c) {
+				cout << "true" << endl;
+			}
+			else {
+				if (c * c == a * a + b * b) {
+					cout << "true" << endl;
+				}
+				else {
+					cout << "false" << endl;
+				}
+			}
+
+		}
+	}
+}
+void four()
+{
+	int A;
+	cout << "--------------------" << endl;
+	cout << "A = ";
+	cin >> A;
+	if ((A % 10 == A / 1000) and (A % 100 / 10 == A % 1000 / 100))
+	{
+		cout << "true" << endl;
+	}
+	else
+	{
+		cout << "false" << endl;
+	}
+}
+void three()
+{
+	int A;
+	cout << "--------------------" << endl;
+	cout << "A = ";
+	cin >> A;
+	if ((A / 100) > (A % 100 / 10) and (A % 100 / 10) > (A % 10) or (A / 100) < (A % 100 / 10) and (A % 100 / 10) < (A % 10))
+	{
+		cout << "true" << endl;
+	}
+	else
+	{
+		cout << "false" << endl;
+	}
+}
+
+void two()
+{
+	int A;
+	cout << "--------------------" << endl;
+	cout << "A = ";
+	cin >> A;
+	if ((A % 2 == 0) and (A > 9) and (A < 100)) 
+	{
+		cout << "true" << endl;
+	}
+	else
+	{
+		cout << "false" << endl;
+	}
+}
+void one()
+{
+	int A, B, C;
+	cout << "--------------------" << endl;
+	cout << "A, B, C = ";
+	cin >> A;
+	cin >> B;
+	cin >> C;
+	if ((A < B) and (B < C))
+	{
+		cout << "true" << endl;
+	}
+	else
+	{
+		cout << "false" << endl;
+	}
+}
+int main()
+{
+	int A, B;
+	cout << "A, B = ";
+	cin >> A;
+	cin >> B;
+	if ((A > 2) and (B <= 3)) 
+	{
+		cout << "true" << endl;
+	}
+	else 
+	{
+		cout << "false" << endl;
+	}
+	one();
+	two();
+	three();
+	four();
+	five();
+	six();
+}
