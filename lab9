@@ -1,0 +1,95 @@
+#include <iostream>
+#include <math.h>
+using namespace std;
+
+void four()
+{
+    int A, B;
+    cout << "------------------" << endl;
+    cout << "A = ";
+    cin >> A;
+    if (A >= 0) 
+    {
+        if (A % 100 > 0) 
+        {
+            B = A / 100 + 1;
+        }
+        else 
+        {
+            B = A / 100;
+        }
+        cout << "B = " << B << endl; 
+    }
+    else 
+    {
+        cout << "ERROR" << endl;
+    }
+}
+
+void three()
+{
+    int A, B, C, t1, t2, t, S;
+    cout << "------------------" << endl;
+    cout << "A = ";
+    cin >> A;
+    cout << "B = ";
+    cin >> B;
+    cout << "C = ";
+    cin >> C;
+    t1 = A / C;
+    t2 = B / C;
+    t = t1 * t2;
+    S = (A * B) - (C * C * t);
+    cout << "t = " << t << endl << "S = " << S << endl;
+}
+
+void two()
+{
+    int K, N, y;
+    cout << "------------------" << endl;
+    cout << "K = ";
+    cin >> K;
+    cout << "N = ";
+    cin >> N;
+    if ((K < 0) and (K > 366) and (N > 8) and (N < 0)) 
+    {
+        cout << "ERROR" << endl;
+    }
+    else 
+    {
+        N = N - 2;
+        y = ((K + N) % 7) + 1;
+        cout << "y = " << y << endl;
+    }
+
+}
+
+void one() 
+{
+    int K, y;
+    cout << "------------------" << endl;
+    cout << "K = ";
+    cin >> K;
+    if ((K < 0) and (K > 365))
+    {
+        cout << "ERROR";
+    }
+    else 
+    {
+        y = K % 7;
+    }
+    cout << "y = " << y << endl;
+}
+
+int main() 
+{
+    int N, sec;
+    cout << "N = ";
+    cin >> N;
+    sec = N % 60;
+    cout << "sec = " << sec << endl;
+    one();
+    two();
+    three();
+    four();
+}
