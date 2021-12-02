@@ -4,9 +4,10 @@ using namespace std;
 
 void four()
 {
+    setlocale(LC_ALL, "Russian");
     int A, B;
     cout << "------------------" << endl;
-    cout << "A = ";
+    cout << "Введите год = ";
     cin >> A;
     if (A >= 0) 
     {
@@ -18,7 +19,7 @@ void four()
         {
             B = A / 100;
         }
-        cout << "B = " << B << endl; 
+        cout << "Столетие = " << B << endl; 
     }
     else 
     {
@@ -28,28 +29,26 @@ void four()
 
 void three()
 {
+    setlocale(LC_ALL, "Russian");
     int A, B, C, t1, t2, t, S;
     cout << "------------------" << endl;
-    cout << "A = ";
-    cin >> A;
-    cout << "B = ";
-    cin >> B;
-    cout << "C = ";
-    cin >> C;
+    cout << "Введите A, B, C = ";
+    cin >> A >> B >> C;
     t1 = A / C;
     t2 = B / C;
     t = t1 * t2;
     S = (A * B) - (C * C * t);
-    cout << "t = " << t << endl << "S = " << S << endl;
+    cout << "Кол-во квадратов = " << t << endl << "Площадь = " << S << endl;
 }
 
 void two()
 {
+    setlocale(LC_ALL, "Russian");
     int K, N, y;
     cout << "------------------" << endl;
-    cout << "K = ";
+    cout << "Введите K (1<=K<=365) = ";
     cin >> K;
-    cout << "N = ";
+    cout << "Введите N (1<=N<=7) = ";
     cin >> N;
     if ((K < 0) and (K > 366) and (N > 8) and (N < 0)) 
     {
@@ -59,16 +58,17 @@ void two()
     {
         N = N - 2;
         y = ((K + N) % 7) + 1;
-        cout << "y = " << y << endl;
+        cout << "Ответ = " << y << endl;
     }
 
 }
 
 void one() 
 {
+    setlocale(LC_ALL, "Russian");
     int K, y;
     cout << "------------------" << endl;
-    cout << "K = ";
+    cout << "Введите K (1<=K<=365) = ";
     cin >> K;
     if ((K < 0) and (K > 365))
     {
@@ -78,16 +78,17 @@ void one()
     {
         y = K % 7;
     }
-    cout << "y = " << y << endl;
+    cout << "Ответ = " << y << endl;
 }
 
 int main() 
 {
+    setlocale(LC_ALL, "Russian");
     int N, sec;
-    cout << "N = ";
+    cout << "Введите кол-во секунд = ";
     cin >> N;
     sec = N % 60;
-    cout << "sec = " << sec << endl;
+    cout << "Кол-во секунд прошедших с последней минуты = " << sec << endl;
     one();
     two();
     three();
