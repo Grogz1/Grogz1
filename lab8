@@ -3,36 +3,39 @@ using namespace std;
 
 void four()
 {
+	setlocale(LC_ALL, "Russian");
 	int a, b;
 	cout << "------------------" << endl;
-	cout << "A = "; 
+	cout << "Введите трехзначное число = "; 
 	cin >> a;
 	b = (a % 100 / 10 * 100) + (a % 10) * 10 + a / 100;
-	cout << "B = " << b << endl;
+	cout << "Ответ = " << b << endl;
 }
 
 void three()
 {
+	setlocale(LC_ALL, "Russian");
 	int a, b;
 	cout << "------------------" << endl;
-	cout << "A = ";
+	cout << "Введите двузначное число = ";
 	cin >> a;
 	b = a / 10 + a % 10 * 10;
-	cout << "B = " << b << endl;
+	cout << "Ответ = " << b << endl;
 }
 
 void two()
 {
+	setlocale(LC_ALL, "Russian");
 	int a, b, c;
 	cout << "------------------" << endl;
-	cout << "A = ";
+	cout << "Введите длину отрезка A = ";
 	cin >> a;
-	cout << "B = ";
+	cout << "Введите длину отрезка B = ";
 	cin >> b;
 	if (a > b)
 	{
 		c = a % b;
-		cout << "C = " << c << endl;
+		cout << "Незанятая чать отрезка A = " << c << endl;
 	}
 	else
 	cout << "ERROR" << endl;
@@ -40,29 +43,37 @@ void two()
 
 void one()
 {
+	setlocale(LC_ALL, "Russian");
 	int a, b, c;
 	cout << "------------------" << endl;
-	cout << "A = ";
+	cout << "Введите длину отрезка A = ";
 	cin >> a;
-	cout << "B = ";
+	cout << "Введите длину отрезка B = ";
 	cin >> b;
 	if (a > b) 
 	{
 		c = a / b;
-		cout << "C = " << c << endl;
+		cout << "Кол-во отрезков B лежащих на отрезке A = " << c << endl;
 	}
 	else
 	cout << "ERROR" << endl;
 }
 
-int main()
+int main() 
 {
-	double a;
-	int b;
-	cout << "a = ";
+	setlocale(LC_ALL, "Russian");
+	int a, b;
+	cout << "Введите размер файла в байтах=  ";
 	cin >> a;
-	b = a / 8;
-	cout << "b = " << b << endl;
+	b = a / 1024;
+	if (a % 1024 == 0) 
+	{
+		cout << "Целое число Кбайт = " << b << endl;
+	}
+	else 
+	{
+		cout << "Целое число Кбайт = " << b + 1 << endl;
+	}
 	one();
 	two();
 	three();
