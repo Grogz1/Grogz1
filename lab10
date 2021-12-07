@@ -3,47 +3,46 @@ using namespace std;
 
 void six()
 {
+	setlocale(LC_ALL, "Russian");
 	double a, b, c;
 	cout << "--------------------" << endl;
-	cout << "a, b, c = ";
-	cin >> a;
-	cin >> b;
-	cin >> c;
+	cout << "Целые числа a, b и c = ";
+	cin >> a >> b >> c;
 	if ((a + b) > c and (a + c) > b and (b + c) > a)
 	{
-		cout << "true" << endl;
+		cout << "«Существует треугольник со сторонами a, b, c» - true" << endl;
 	}
 	else
 	{
-		cout << "false" << endl;
+		cout << "«Существует треугольник со сторонами a, b, c» - false" << endl;
 	}
 }
+
 void five()
 {
+	setlocale(LC_ALL, "Russian");
 	double a, b, c;
 	cout << "--------------------" << endl;
-	cout << "a, b, c = ";
-	cin >> a;
-	cin >> b;
-	cin >> c;
+	cout << "Целые числа a, b и c = ";
+	cin >> a >> b >> c;
 	if (a * a == b * b + c * c) 
 	{
-		cout << "true" << endl;
+		cout << "«Треугольник со сторонами a, b, c является прямоугольным» - true" << endl;
 	}
 	else {
 		if (b * b == a * a + c * c) {
-			cout << "true" << endl;
+			cout << "«Треугольник со сторонами a, b, c является прямоугольным» - true" << endl;
 		}
 		else {
 			if (b * b == a * a + c * c) {
-				cout << "true" << endl;
+				cout << "«Треугольник со сторонами a, b, c является прямоугольным» - true" << endl;
 			}
 			else {
 				if (c * c == a * a + b * b) {
-					cout << "true" << endl;
+					cout << "«Треугольник со сторонами a, b, c является прямоугольным» - true" << endl;
 				}
 				else {
-					cout << "false" << endl;
+					cout << "«Треугольник со сторонами a, b, c является прямоугольным» - false" << endl;
 				}
 			}
 
@@ -52,80 +51,82 @@ void five()
 }
 void four()
 {
+	setlocale(LC_ALL, "Russian");
 	int A;
 	cout << "--------------------" << endl;
-	cout << "A = ";
+	cout << "Четырёхзначное A = ";
 	cin >> A;
 	if ((A % 10 == A / 1000) and (A % 100 / 10 == A % 1000 / 100))
 	{
-		cout << "true" << endl;
+		cout << "«Данное число читается одинаково слева направо и справа налево» - true" << endl;
 	}
 	else
 	{
-		cout << "false" << endl;
+		cout << "«Данное число читается одинаково слева направо и справа налево» - false" << endl;
 	}
 }
 void three()
 {
+	setlocale(LC_ALL, "Russian");
 	int A;
 	cout << "--------------------" << endl;
-	cout << "A = ";
+	cout << "Трёхзначное A = ";
 	cin >> A;
 	if ((A / 100) > (A % 100 / 10) and (A % 100 / 10) > (A % 10) or (A / 100) < (A % 100 / 10) and (A % 100 / 10) < (A % 10))
 	{
-		cout << "true" << endl;
+		cout << "«Цифры данного числа образуют возрастающую или убывающую последовательность» - true" << endl;
 	}
 	else
 	{
-		cout << "false" << endl;
+		cout << "«Цифры данного числа образуют возрастающую или убывающую последовательность» - false" << endl;
 	}
 }
 
 void two()
 {
+	setlocale(LC_ALL, "Russian");
 	int A;
 	cout << "--------------------" << endl;
-	cout << "A = ";
+	cout << "Целое положительное A = ";
 	cin >> A;
 	if ((A % 2 == 0) and (A > 9) and (A < 100)) 
 	{
-		cout << "true" << endl;
+		cout << "«Данное число является четным двузначным» - true" << endl;
 	}
 	else
 	{
-		cout << "false" << endl;
+		cout << "«Данное число является четным двузначным» - false" << endl;
 	}
 }
 void one()
 {
+	setlocale(LC_ALL, "Russian");
 	int A, B, C;
 	cout << "--------------------" << endl;
-	cout << "A, B, C = ";
-	cin >> A;
-	cin >> B;
-	cin >> C;
+	cout << "Целые числа A, B и C = ";
+	cin >> A >> B >> C;
 	if ((A < B) and (B < C))
 	{
-		cout << "true" << endl;
+		cout << "«Справедливо двойное неравенство A < B < C» - true" << endl;
 	}
 	else
 	{
-		cout << "false" << endl;
+		cout << "«Справедливо двойное неравенство A < B < C» - false" << endl;
 	}
 }
 int main()
 {
+	setlocale(LC_ALL, "Russian");
 	int A, B;
-	cout << "A, B = ";
-	cin >> A;
-	cin >> B;
+	cout << "Целые числа A и B = ";
+	cin >> A >> B;
 	if ((A > 2) and (B <= 3)) 
 	{
-		cout << "true" << endl;
+		cout << "«Справедливы неравенства A > 2 и B <= 3» - true" << endl;
 	}
 	else 
 	{
-		cout << "false" << endl;
+		cout << "«Справедливы неравенства A > 2 и B <= 3» - false" << endl;
 	}
 	one();
 	two();
