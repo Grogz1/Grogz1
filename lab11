@@ -1,0 +1,177 @@
+#include <iostream>
+using namespace std;
+
+void five()
+{
+    setlocale(LC_ALL, "Russian");
+    int A;
+    cout << "------------------------" << endl;
+    cout << "Введите целое число от 1 до 999: ";
+    cin >> A;
+    if ((A % 2) == 0)
+    {
+        cout << "Четное ";
+    }
+    else
+    {
+        cout << "Не четное ";
+    }
+    if (A / 100 > 0 && A / 100 < 10)
+    {
+        cout << "трёхзначное ";
+    }
+    else
+    {
+        if (A / 10 > 0 && A / 10 < 10)
+        {
+            cout << "двухзначное ";
+        }
+        else
+        {
+            if ((A / 10) == 0)
+            {
+                cout << "однозначное ";
+            }
+        }
+    }
+    cout << "число";
+}
+
+void four()
+{
+    setlocale(LC_ALL, "Russian");
+    int A;
+    cout << "------------------------" << endl;
+    cout << "Введите число: ";
+    cin >> A;
+    if (A == 0)
+    {
+        cout << "Нулевое ";
+    }
+    else
+    {
+        if (A > 0)
+        {
+            cout << "Положительное ";
+        }
+        else
+        {
+            cout << "отрицательное ";
+        }
+        if ((A % 2) == 0)
+        {
+            cout << "четное ";
+        }
+        else
+        {
+            cout << "Нечетное ";
+        }
+    }
+    cout << "число" << endl;
+}
+
+void three()
+{
+    setlocale(LC_ALL, "Russian");
+    int x, y;
+    cout << "------------------------" << endl;
+    cout << "Введите координаты x и y: ";
+    cin >> x >> y;
+    if ((x > 0) & (y > 0))
+    {
+        cout << "I четверть" << endl;
+    }
+    else
+    {
+        if ((x < 0) & (y > 0))
+        {
+            cout << "II четверть" << endl;
+        }
+        else
+        {
+            if ((x < 0) & (y < 0))
+            {
+                cout << "III четверть" << endl;
+            }
+            else
+            {
+                cout << "IV четверть" << endl;
+            }
+        }
+    }
+}
+
+void two()
+{
+    setlocale(LC_ALL, "Russian");
+    int A, B, C;
+    cout << "------------------------" << endl;
+    cout << "Введите точки A, B и C = ";
+    cin >> A >> B >> C;
+    if (abs(A - B) < abs(A - C))
+    {
+        cout << "Точка: " << B << endl;
+        cout << "Расстояние: " << B - A << endl;
+    }
+    else
+    {
+        cout << "Точка: " << C << endl;
+        cout << "Расстояние: " << C - A << endl;
+    }
+}
+
+void one()
+{
+    setlocale(LC_ALL, "Russian");
+    int A, B, C;
+    cout << "------------------------" << endl;
+    cout << "Введите 3 числа = ";
+    cin >> A >> B >> C;
+    if (A <= B && B <= A) 
+    {
+        cout << "Ответ = " << A + C << endl;
+    }
+    else 
+    {
+        if (A <= C && A <= B)
+        {
+            cout << "Ответ = " << B + C << endl;
+        }
+        else 
+        {
+            cout << "Ответ = " << B + A << endl;
+        }
+    }
+}
+
+int main()
+{
+    setlocale(LC_ALL, "Russian");
+    int A, B;
+    cout << "Переменные целого типа A и B = ";
+    cin >> A >> B;
+    if (A > B)
+    {
+        B = A;
+        cout << "Ответ = " << A << " " << B << endl;
+    }
+    else 
+    {
+        if (A < B) 
+        {
+            A = B;
+            cout << "Ответ = " << A << " " << B << endl;
+        }
+        else 
+        {
+            A = 0;
+            B = 0;
+            cout << "Ответ = " << A << " " << B << endl;
+        }
+    }
+    one();
+    two();
+    three();
+    four();
+    five();
+}
