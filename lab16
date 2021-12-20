@@ -1,29 +1,68 @@
 #include <iostream>
+#include <vector>
 #include <cmath>
 using namespace std;
 
+void five()
+{
+    int n;
+    cout << "-------------------------------------------------------------------------" << endl;
+    cout << "5) Дан массив A размера N. Вывести вначале его элементы с нечетными номерами в порядке возрастания номеров, а затем — элементы с четными номерами в порядке убывания номеров" << endl;
+    vector <int> arr;
+    cout << "Введите размер массива: ";
+    cin >> n;
+    for (int i = 0; i <= n; i++)
+    {
+        arr.push_back(i);
+    }
+    cout << endl << "Нечетные числа в массиве: ";
+    for (int i = n; i >= 0; i--)
+    {
+        if (i % 2 == 1)
+        {
+            cout << arr[i] << " ";
+        }
+    }
+    cout << "Чётные числа в массиве: ";
+    for (int i = 1; i <= n; i++)
+    {
+        if (i % 2 == 0)
+        {
+            cout << arr[i] << " ";
+        }
+    }
+}
+
+
 void four()
 {
-    int arr[N], s, L, R;
+    setlocale(LC_ALL, "Russian");
+    int N;
+    cout << "-------------------------------------------------------------------------" << endl;
+    cout << "4) Дан массив A размера N. Вывести его элементы в следующем порядке: A1, AN , A2, AN−1, A3, AN−2," << endl;
+    cout << "Введите размер массива N: ";
+    cin >> N;
+    int* arr = new int[N];
+    int s, L, R;
     {
         for (s = 0; s < N; s++)
         {
-            cout << "Vvedite " << s + 1 << " znachenie massiva ";
+            cout << "Введите " << s + 1 << " значение массива: ";
             cin >> arr[s];
         }
-        cout << "\nMassiv A\n";
+        cout << "Массив A = ";
         for (s = 0; s < N; s++)
-            cout << arr[s] << ' ';
+            cout << arr[s] << " " << endl;
 
         L = 0;
         R = N - 1;
-        cout << '\n';
+        cout << endl;
         while (L <= R)
         {
-            cout << arr[L];
+            cout << arr[L] << " " << endl;
             if (L == R)
                 break;
-            cout << arr[R];
+            cout << arr[R] << " " << endl;
             L++;
             R--;
         }
@@ -33,53 +72,62 @@ void four()
 
 void three()
 {
-    int N, sum = 0;
     cout << "-------------------------------------------------------------------------" << endl;
     cout << "3) Даны целые числа N (> 2), A и B. Сформировать и вывести целочисленный массив размера N, первый элемент которого равен A, второй равен B, а каждый последующий элемент равен сумме всех предыдущих" << endl;
-    cout << "Введите целое число N: ";
-    cin >> N;
-    int arr[100];
-    int A, B;
-    cout << "Введите целые числа A и B: ";
-    cin >> A >> B;
-    for (int i = 2; i < N; ++i) 
+    int n, a, b;
+    vector <int> arr;
+    cout << "Введите размер массива N (> 2): ";
+    cin >> n;
+    cout << "Введите первый элемент А: ";
+    cin >> a;
+    cout << "Введите второй элемент В: ";
+    cin >> b;
+    for (int i = 1; i <= n; i++)
     {
-        arr[0] = A;
-        arr[1] = B;
-        sum = (arr[i - 2] + arr[i - 1]);
-        arr[i] = sum;
-
+        arr.push_back(i);
     }
-    for (int i = 0; i < N; i++) 
+    arr[0] = a;
+    arr[1] = b;
+    arr[2] = a + b;
+    a = a + b;
+    for (int i = 3; i < arr.size(); i++)
     {
-        cout << arr[i] << endl;
+        arr[i] = a * 2;
+        a = arr[i];
+    }
+    cout << "Массив: ";
+    for (int i = 0; i < arr.size(); i++)
+    {
+        cout << arr[i] << " " << endl;
     }
 }
 
 void two()
 {
-    int* A = new int[N];
     cout << "-------------------------------------------------------------------------" << endl;
     cout << "2) Дано целое число N (> 1), а также первый член A и знаменатель D геометрической прогрессии. Сформировать и вывести массив размера N, содержащий N первых членов данной прогрессии: A, A·D, A·D2 , A·D3 , . . ." << endl;
-    cout << "Введите целое число N (>1): ";
-    cin >> N;
-    int arr[N];
-    double A;
-    cout << "Введите первый член A: ";
-    cin >> A;
-    arr[0] = A;
-    double D;
-    cout << "Введите знаменатель D геометрической прогрессии: ";
-    cin >> D;
-    int z = 1;
-    for (int i = 0; i < N; ++i) {
-        arr[i] = N * z;
-        z *= D;
+    int n, a, d, k = 1;
+    vector <int> arr;
+    cout << "Введите N (>1):";
+    cin >> n;
+    cout << "Введите первый член А: ";
+    cin >> a;
+    cout << "Введите знаминатель геометрической прогрессии D: ";
+    cin >> d;
+    for (int i = 1; i <= n; i++)
+    {
+        arr.push_back(i);
     }
-    for (int i = 0; i < N; ++i) {
-        cout << arr[i] << " ";
+    for (int i = 1; i < n; i++)
+    {
+        arr[i] = a * pow(d, k);
+        k++;
     }
-    cout << endl;
+    cout << "Геометрическая прогрессия: " << a << " " << endl;
+    for (int i = 1; i < arr.size(); i++)
+    {
+        cout << arr[i] << " " << endl;
+    }
 }
 
 int main()
@@ -98,6 +146,9 @@ int main()
     {
         cout << "a[" << i << "]=" << a[i] << endl;
     }
+    two();
     three();
+    four();
+    five();
     return 0;
 }
