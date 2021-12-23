@@ -43,35 +43,24 @@ int Quarter(int x, int y)
             }
 }
 
-double Fact2(int x)
+void Fact2(int N)
 {
-    double p;
-    int j, i;
-    if (x % 2 == 0)
-    {
-        p = 1;
-        for (i = 1, j = 0; i < x; i++)
-        {
-            j += 2;
-            p = p * (double)j;
-            if (p == x)
-            {
-                p = p * (double)j;
-                return p;
-                break;
-            }
-        }
+    int i, num = 1, num1;
+    if (N % 2 == 0) {
+        num = 2;
+        num1 = 2;
+        i = 1;
     }
-    if (x % 2 != 0)
-    {
-        p = 1;
-        for (i = 1, j = 1; j < x; i++)
-        {
-            j += 2;
-            p = p * (double)j;
-        }
+    else {
+        num = 1;
+        num1 = 1;
+        i = 0;
     }
-    return p;
+    for (i; i <= N / 2; i++) {
+        num1 += 2;
+        num = num * num1;
+    }
+    cout << num;
 }
 
 void five()
@@ -81,7 +70,7 @@ void five()
     cout << "5) Описать функцию Fact2(N) вещественного типа, вычисляющую двойной факториал: N!! = 1·3·5·. . .·N, если N — нечетное; N!! = 2·4·6·. . .·N, если N — четное (N > 0 — параметр целого типа; вещественное возвращаемое значение используется для того, чтобы избежать целочисленного переполнения при больших значениях N)." << endl;
     cout << "Введите число возводимое в Fact2:";
     cin >> n;
-    cout << Fact2(n) << endl;
+    Fact2(n);
 }
 
 void four()
